@@ -1,10 +1,8 @@
 #! /bin/bash
 
-
 echo "Atualizando Sistema"
 apt-get update
 apt-get upgrade -y
-
 
 echo "instalando apps"
 apt-get install apache2 unzip -y
@@ -15,6 +13,7 @@ wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.z
 unzip main.zip
 cd linux-site-dio-main
 
+echo "movendo arquivos da aplicacao"
 cp -R * /var/www/html/
 
 
